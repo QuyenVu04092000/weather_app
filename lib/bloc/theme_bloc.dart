@@ -11,20 +11,24 @@ class ThemeBloc extends Bloc<ThemeEvent, ThemeState>{
   Stream<ThemeState> mapEventToState(ThemeEvent themeEvent) async*{
     ThemeState newThemeState;
     if(themeEvent is ThemeEventWeatherChanged){
-      final weatherCondition = themeEvent.weatherCondition;
-      if(weatherCondition == WeatherCondition.clear ||
-         weatherCondition == WeatherCondition.lightCloud) {
+      final weatherCondition = themeEvent.main;
+      if(weatherCondition == 'Clear' ||
+         weatherCondition == 'LightCloud') {
         newThemeState = ThemeState(backgroundColor: Colors.yellow, textColor: Colors.white);
-      } else if(weatherCondition == WeatherCondition.fog ||
-                weatherCondition == WeatherCondition.atmosphere ||
-                weatherCondition == WeatherCondition.rain ||
-                weatherCondition == WeatherCondition.drizzle ||
-                weatherCondition == WeatherCondition.mist ||
-                weatherCondition == WeatherCondition.heavyCloud) {
+      } else if(weatherCondition == 'Fog' ||
+                weatherCondition == 'Atmosphere' ||
+                weatherCondition == 'Rain' ||
+                weatherCondition == 'Drizzle' ||
+                weatherCondition == 'Mist' ||
+                weatherCondition == 'HeavyCloud' ||
+                weatherCondition == 'Dust' ||
+                weatherCondition == 'Ash' ||
+                weatherCondition == 'Sand'
+      ) {
         newThemeState = ThemeState(backgroundColor: Colors.indigo, textColor:  Colors.white);
-      } else if(weatherCondition == WeatherCondition.snow){
+      } else if(weatherCondition == 'Snow'){
         newThemeState = ThemeState(backgroundColor: Colors.lightBlue, textColor:  Colors.white);
-      } else if(weatherCondition == WeatherCondition.thunderstorm){
+      } else if(weatherCondition == 'Thunderstorm'){
         newThemeState = ThemeState(backgroundColor: Colors.deepPurple, textColor:  Colors.white);
       } else {
         newThemeState = ThemeState(backgroundColor: Colors.lightBlue, textColor: Colors.white);

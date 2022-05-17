@@ -15,60 +15,62 @@ enum WeatherCondition {
 }
 
 class Weather extends Equatable{
-  final WeatherCondition weatherCondition;
+
   final String formattedCondition;
-  final double minTemp;
-  final double maxTemp;
+  final String main;
+  final double feelsLike;
+  final int humidity;
   final double temp;
-  final int locationId;
-  final String location;
+  final double windSpeed;
+  final int clouds;
   final String lastUpdated;
+
 //constructor
   const Weather ({
-    required this.weatherCondition,
+
     required this.formattedCondition,
-    required this.minTemp,
-    required this.maxTemp,
+    required this.main,
+    required this.feelsLike,
+    required this.humidity,
     required this.temp,
-    required this.locationId,
-    required this.location,
+    required this.windSpeed,
+    required this.clouds,
     required this.lastUpdated
   });
   @override
   List<Object> get props => [
-    weatherCondition,
+
     formattedCondition,
-    minTemp,
-    maxTemp,
+    feelsLike,
+    humidity,
     temp,
-    locationId,
-    location,
+    windSpeed,
+    clouds,
     lastUpdated
   ];
 //convert from JSON to Weather object
   factory Weather.fromJson(dynamic jsonObject){
-    final list = jsonObject['List'][0];
-    final cloudiness = list['clouds']['all'];
     return Weather(
-      weatherCondition: _mapStringToWeatherCondition(list['weather']['description'],cloudiness),
-      formattedCondition: list['weather']['description'] ?? '',
-      minTemp: list['main']['temp_min'] ?? '',
-      maxTemp: list['main']['temp_max'] ?? '',
-      temp: list['main']['temp'] ?? '',
-      locationId: jsonObject['city']['id'] as int,
-      location:  jsonObject['city']['name'] ?? '',
-      lastUpdated: list['dt_txt']
+
+      formattedCondition: jsonObject['weather'][0]['description'].toString(),
+      main:  jsonObject['weather'][0]['main'].toString(),
+      feelsLike: jsonObject['main']['feels_like'] as double,
+      humidity: jsonObject['main']['humidity'] as int,
+      temp: jsonObject['main']['temp'] as double,
+      windSpeed: jsonObject['wind']['speed'] as double,
+      clouds: jsonObject['clouds']['all'] as int,
+      lastUpdated: jsonObject['dt_txt'].toString()
     );
   }
 
-  static WeatherCondition _mapStringToWeatherCondition(String inputString, int cloudiness){
+  static WeatherCondition _mapStringToWeatherCondition(String inputString){
     Map<String, WeatherCondition> map = {
       'Thunderstorm': WeatherCondition.thunderstorm,
       'Drizzle': WeatherCondition.drizzle,
       'Rain' : WeatherCondition.rain,
       'Snow' : WeatherCondition.snow,
       'Clear' : WeatherCondition.clear,
-      'Clouds' : cloudiness >= 85 ? WeatherCondition.heavyCloud : WeatherCondition.lightCloud,
+      'Clouds' : WeatherCondition.heavyCloud ,
       'Mist' : WeatherCondition.mist,
       'fog' : WeatherCondition.fog,
       'Smoke' : WeatherCondition.atmosphere,

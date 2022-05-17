@@ -5,10 +5,10 @@ abstract class ThemeEvent extends Equatable{
   const ThemeEvent();
 }
 class ThemeEventWeatherChanged extends ThemeEvent{
-  final WeatherCondition weatherCondition;
-  const ThemeEventWeatherChanged({required this.weatherCondition}):
-      assert(weatherCondition != null);
+ final String main;
+  const ThemeEventWeatherChanged({required this.main}):
+      assert(main != null);
   @override
   // TODO: implement props
-  List<Object> get props => [weatherCondition];
+  List<Object> get props => [main];
 }

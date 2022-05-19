@@ -11,28 +11,31 @@ class SettingsScreen extends StatelessWidget{
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.lightBlueAccent,
         title: Text('Settings'),
       ),
-      body: ListView(
-        children: <Widget>[
-          BlocBuilder<SettingsBloc, SettingsState>(
-              builder: (context, settingsState){
-                return ListTile(
-                  title: Text('Temperature Unit'),
-                  isThreeLine: true,
-                  subtitle: Text(
-                    settingsState.temperatureUnit == TemperatureUnit.celsius ?
-                        'Celsius' : 'Fahrenheit'
-                  ),
-                  trailing: Switch(
-                    value: settingsState.temperatureUnit == TemperatureUnit.celsius,
-                    onChanged: (_) => BlocProvider.of<SettingsBloc>(context).
-                      add(SettingsEventToggleUnit())
-                  ),
-                );
-              }
-          )
-        ],
+      body: SafeArea(
+        child: ListView(
+          children: <Widget>[
+            BlocBuilder<SettingsBloc, SettingsState>(
+                builder: (context, settingsState){
+                  return ListTile(
+                    title: Text('Temperature Unit'),
+                    isThreeLine: true,
+                    subtitle: Text(
+                      settingsState.temperatureUnit == TemperatureUnit.celsius ?
+                          'Celsius' : 'Fahrenheit'
+                    ),
+                    trailing: Switch(
+                      value: settingsState.temperatureUnit == TemperatureUnit.celsius,
+                      onChanged: (_) => BlocProvider.of<SettingsBloc>(context).
+                        add(SettingsEventToggleUnit())
+                    ),
+                  );
+                }
+            )
+          ],
+        ),
       ),
     );
   }

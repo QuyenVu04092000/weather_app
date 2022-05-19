@@ -17,6 +17,7 @@ class _CitySearchScreen extends State<CitySearchScreen>{
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.lightBlueAccent,
         title: Text('Enter a city'),
       ),
       body: SafeArea(

@@ -36,7 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_bloc: ^7.1.0
   http: ^0.13.0
-  equatable: ^1.0.0
+  equatable: ^2.0.3
   weather_icons: ^2.0.1
   device_preview: ^1.0.0
   flutter_svg: ^0.20.0-nullsafety.3

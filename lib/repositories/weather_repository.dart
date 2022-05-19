@@ -10,7 +10,8 @@ import '../models/city.dart';
 import '../models/weather.dart';
 
 const baseUrl = 'https://api.openweathermap.org/data/2.5/forecast';
-final locationUrl = (name) => '${baseUrl}?q=${name}&cnt=6&appid=2ee7d8f2d8765d13ea48e1a177f32cfa';
+const apiKey = "2ee7d8f2d8765d13ea48e1a177f32cfa";
+final locationUrl = (name) => '${baseUrl}?q=${name}&cnt=6&appid=${apiKey}';
 class WeatherRepository{
   final http.Client httpClient;
 

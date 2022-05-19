@@ -9,24 +9,18 @@ import 'package:weather_app/repositories/weather_repository.dart';
 import 'package:http/http.dart' as http;
 import 'package:weather_app/screens/weather_screen.dart';
 
-import 'bloc/theme_bloc.dart';
-
 void main() {
   final WeatherRepository weatherRepository = WeatherRepository(
     httpClient: http.Client()
   );
   //create blocs
   runApp(
-    MultiBlocProvider(
-      providers: [
-        BlocProvider<ThemeBloc>(create: (context) => ThemeBloc(),),
-        BlocProvider<SettingsBloc>(create: (context) => SettingsBloc(),),
-      ],
+    BlocProvider(create: (context) => SettingsBloc(),
       child: DevicePreview(
               enabled: !kReleaseMode,
               builder: (context) => MyApp(weatherRepository: weatherRepository,), // Wrap your app
             ),
-    )
+  ),
   );
 }
 

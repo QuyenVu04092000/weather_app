@@ -1,12 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:weather_app/bloc/settings_bloc.dart';
 import 'package:weather_app/models/weather.dart';
 import 'package:weather_app/states/settings_state.dart';
-
-import '../bloc/theme_bloc.dart';
-import '../states/theme_state.dart';
 
 class TemperatureWidget extends StatelessWidget{
   final List<Weather> weather;
@@ -24,7 +22,7 @@ class TemperatureWidget extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    ThemeState _themeState = BlocProvider.of<ThemeBloc>(context).state;
+    final Size = MediaQuery.of(context).size;
     return SafeArea(
       child: Column(
         children: <Widget>[
@@ -32,43 +30,130 @@ class TemperatureWidget extends StatelessWidget{
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Padding(
-                  padding: EdgeInsets.symmetric(vertical: 30, horizontal: 20),
+                  padding: EdgeInsets.symmetric(vertical: 30, horizontal: 30),
                 child: BlocBuilder<SettingsBloc, SettingsState>(
                   builder: (context, settingsState){
                     return Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Text('Weather: ${weather[index].main}, ${weather[index].formattedCondition}',
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.black,
+                        Row(
+                          children: [
+                            SvgPicture.asset(
+                              "assets/icons/sun.svg",
+                              height: Size.height * 0.025,
+                              width: Size.width * 0.025,
+                            ),
+                            SizedBox(
+                              width: Size.width * 0.04,
+                            ),
+                            Text('Weather: ${weather[index].main}, ${weather[index].formattedCondition}',
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.black,
+                            ),
+                            ),
+                          ],
                         ),
+                        SizedBox(
+                          height: Size.height * 0.02,
                         ),
-                        Text('Temp: ${_formattedTemperature(weather[index].temp-273.15, settingsState.temperatureUnit)}',
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Colors.black,
-                          ),),
-                        Text('Feels Like: ${_formattedTemperature(weather[index].feelsLike-273.15, settingsState.temperatureUnit)}',
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Colors.black,
-                          ),),
-                        Text('Humidity: ${weather[index].humidity}%',
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Colors.black,
-                          ),),
-                        Text('Wind Speed: ${weather[index].windSpeed}m/s',
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Colors.black,
-                          ),),
-                        Text('Clouds: ${weather[index].clouds}%',
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Colors.black,
-                          ),),
+                        Row(
+                          children: [
+                            SvgPicture.asset(
+                              "assets/icons/temp.svg",
+                              height: Size.height * 0.025,
+                              width: Size.width * 0.025,
+                            ),
+                            SizedBox(
+                              width: Size.width * 0.04,
+                            ),
+                            Text('Temp: ${_formattedTemperature(weather[index].temp-273.15, settingsState.temperatureUnit)}',
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.black,
+                              ),),
+                          ],
+                        ),
+                        SizedBox(
+                          height: Size.height * 0.02,
+                        ),
+                        Row(
+                          children: [
+                            SvgPicture.asset(
+                              "assets/icons/feels-like.svg",
+                              height: Size.height * 0.025,
+                              width: Size.width * 0.025,
+                            ),
+                            SizedBox(
+                              width: Size.width * 0.04,
+                            ),
+                            Text('Feels Like: ${_formattedTemperature(weather[index].feelsLike-273.15, settingsState.temperatureUnit)}',
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.black,
+                              ),),
+                          ],
+                        ),
+                        SizedBox(
+                          height: Size.height * 0.02,
+                        ),
+                        Row(
+                          children: [
+                            SvgPicture.asset(
+                              "assets/icons/humidity.svg",
+                              height: Size.height * 0.025,
+                              width: Size.width * 0.025,
+                            ),
+                            SizedBox(
+                              width: Size.width * 0.04,
+                            ),
+                            Text('Humidity: ${weather[index].humidity}%',
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.black,
+                              ),),
+                          ],
+                        ),
+                        SizedBox(
+                          height: Size.height * 0.02,
+                        ),
+                        Row(
+                          children: [
+                            SvgPicture.asset(
+                              "assets/icons/wind.svg",
+                              height: Size.height * 0.025,
+                              width: Size.width * 0.025,
+                            ),
+                            SizedBox(
+                              width: Size.width * 0.04,
+                            ),
+                            Text('Wind Speed: ${weather[index].windSpeed}m/s',
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.black,
+                              ),),
+                          ],
+                        ),
+                        SizedBox(
+                          height: Size.height * 0.02,
+                        ),
+                        Row(
+                          children: [
+                            SvgPicture.asset(
+                              "assets/icons/clouds.svg",
+                              height: Size.height * 0.025,
+                              width: Size.width * 0.025,
+                            ),
+                            SizedBox(
+                              width: Size.width * 0.04,
+                            ),
+                            Text('Clouds: ${weather[index].clouds}%',
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.black,
+                              ),),
+                          ],
+                        ),
                       ],
                     );
                   },

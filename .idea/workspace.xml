@@ -10,31 +10,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccc75745-ab19-42ac-a783-ba6688978381" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/models/city.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/city_search_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/settings_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/temperature_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/main_dart.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/main_dart.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/weather_app_android.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android/weather_app_android.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bloc/theme_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bloc/theme_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bloc/weather_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bloc/weather_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bloc/weather_bloc_observer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bloc/weather_bloc_observer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/events/theme_event.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/events/theme_event.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bloc/theme_bloc.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/events/theme_event.dart" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/models/weather.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/weather.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/repositories/weather_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repositories/weather_repository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/city_search_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/city_search_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/settings_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/settings_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/temperature_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/temperature_widget.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/weather_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/weather_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/states/theme_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/states/theme_state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/states/weather_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/states/weather_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/states/theme_state.dart" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/widget_test.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.h" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/generated_plugins.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/weather_app.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,11 +68,10 @@
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="true" />
-    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="D:/flutter/bin/cache/dart-sdk" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="discord-application" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

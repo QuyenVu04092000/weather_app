@@ -37,7 +37,6 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       theme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
       title: 'Flutter Weather App with Bloc',
       home: BlocProvider(
         create: (context) => WeatherBloc(weatherRepository: weatherRepository),

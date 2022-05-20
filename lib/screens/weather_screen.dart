@@ -89,40 +89,38 @@ class _WeatherScreenState extends State<WeatherScreen>{
                                             SizedBox(
                                               height: Size.height * 0.02
                                             ),
-                                            Center(
-                                              child: Row(
-                                                mainAxisAlignment: MainAxisAlignment.start,
-                                                children: <Widget>[
-                                                  SizedBox(
-                                                    width: Size.width * 0.03,
-                                                  ),
-                                                  SvgPicture.asset(
-                                                      "assets/icons/time.svg",
-                                                    height: Size.height * 0.035,
-                                                    width: Size.width * 0.035,
-                                                  ),
-                                                  SizedBox(
-                                                    width: Size.width * 0.02,
-                                                  ),
-                                                  Container(
-                                                    width: Size.width * 0.78,
-                                                      child: Text(
-                                                        '${weather[index].lastUpdated} in ${city.name}' ,
-                                                        maxLines: 1,
-                                                        softWrap: false,
-                                                        overflow: TextOverflow.ellipsis,
-                                                        style: TextStyle(
-                                                          fontSize: 22,
-                                                          fontWeight: FontWeight.bold,
-                                                          color: Colors.black,
-                                                          decoration: TextDecoration.underline,
-                                                          decorationColor: Colors.lightBlueAccent,
-                                                          decorationThickness: 4,
-                                                        ),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment.start,
+                                              children: <Widget>[
+                                                SizedBox(
+                                                  width: Size.width * 0.03,
+                                                ),
+                                                SvgPicture.asset(
+                                                    "assets/icons/time.svg",
+                                                  height: Size.height * 0.035,
+                                                  width: Size.width * 0.035,
+                                                ),
+                                                SizedBox(
+                                                  width: Size.width * 0.02,
+                                                ),
+                                                Container(
+                                                  width: Size.width * 0.78,
+                                                    child: Text(
+                                                      '${weather[index].lastUpdated} in ${city.name}' ,
+                                                      maxLines: 1,
+                                                      softWrap: false,
+                                                      overflow: TextOverflow.ellipsis,
+                                                      style: TextStyle(
+                                                        fontSize: 22,
+                                                        fontWeight: FontWeight.bold,
+                                                        color: Colors.black,
+                                                        decoration: TextDecoration.underline,
+                                                        decorationColor: Colors.lightBlueAccent,
+                                                        decorationThickness: 4,
                                                       ),
-                                                  ),
-                                                ],
-                                              ),
+                                                    ),
+                                                ),
+                                              ],
                                             ),
                                             TemperatureWidget(weather: weather, index: index,)
                                           ],

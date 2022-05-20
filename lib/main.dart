@@ -17,7 +17,7 @@ void main() {
   runApp(
     BlocProvider(create: (context) => SettingsBloc(),
       child: DevicePreview(
-              enabled: kReleaseMode,
+              enabled: !kReleaseMode,
               builder: (context) => MyApp(weatherRepository: weatherRepository,), // Wrap your app
             ),
   ),

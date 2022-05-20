@@ -17,7 +17,7 @@ void main() {
   runApp(
     BlocProvider(create: (context) => SettingsBloc(),
       child: DevicePreview(
-              enabled: !kReleaseMode,
+              enabled: kReleaseMode,
               builder: (context) => MyApp(weatherRepository: weatherRepository,), // Wrap your app
             ),
   ),
@@ -37,7 +37,6 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       theme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
       title: 'Flutter Weather App with Bloc',
       home: BlocProvider(
         create: (context) => WeatherBloc(weatherRepository: weatherRepository),
